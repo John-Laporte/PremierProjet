@@ -1,13 +1,66 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
 <head>
-   <title>Decouverte Git et Git hub</title>
-   <link rel="stylesheet" type="text/css" href="styles.css">
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title> Calculatrice JS</title>
+   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-   <pre> je suis victorieux, et je vouidrais triomphé
-			1?3?5 et je regnerais </pre>	
+   
+   <div id="particles"></div>
 
-   <h1>Depuis le 1er octobre 2020, tous les nouveaux dépôts créés sur GitHub sont appelés “main”, au lieu de “master” comme c’était le cas historiquement. <br>Ce changement de terme a été opéré par la société GitHub afin d’adopter des références plus inclusives. Les dépôts existants, eux, ne changent pas de nom. Vous verrez donc les deux termes dans vos projets.<br> Pour créer vos premiers fichiers, vous aurez besoin de manipuler des fichiers HTML et CSS. N'hésitez pas à consulter ce <a href="https://openclassrooms.com/fr/courses/1603881-creez-votre-site-web-avec-html5-et-css3">cours</a> pour accéder à des ressources supplémentaires à ce sujet.</h1>
+
+    <script>
+
+        const particles = document.getElementById("particles");
+
+        // Nombre de points
+        const nombreDePoints = 100;
+
+
+        for (let i = 0; i < nombreDePoints; i++) {
+
+            // Création du point
+            const point = document.createElement("span");
+
+            point.classList.add("point");
+
+
+            // Position horizontale aléatoire
+            point.style.left = Math.random() * 100 + "%";
+
+
+            // Taille aléatoire
+            const taille = Math.random() * 4 + 2;
+
+            point.style.width = taille + "px";
+            point.style.height = taille + "px";
+
+
+            // Durée de descente aléatoire
+            const vitesse = Math.random() * 8 + 4;
+
+            point.style.animationDuration = vitesse + "s";
+
+
+            // Délai aléatoire
+            point.style.animationDelay =
+                "-" + Math.random() * vitesse + "s";
+
+
+            // Opacité aléatoire
+            point.style.opacity =
+                Math.random() * 0.8 + 0.2;
+
+
+            // Ajout à la page
+            particles.appendChild(point);
+        }
+
+    </script>
+    <script src="index.js"></script>
+
 </body>
 </html>
+
