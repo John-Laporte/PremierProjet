@@ -1,3 +1,57 @@
-h1 {
-	color: red;
-   }
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    overflow: hidden;
+    min-height: 100vh;
+    background: #050b14;
+}
+
+/* Zone des particules */
+#particles {
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+/* Chaque point */
+.point {
+    position: absolute;
+    top: -10px;
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background: #1e90ff;
+    box-shadow: 0 0 10px #1e90ff;
+    animation-name: descendre;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+/* Animation */
+@keyframes descendre {
+
+    from {
+        transform: translateY(0);
+        opacity: 0;
+    }
+
+    10% {
+        opacity: 1;
+    }
+
+    90% {
+        opacity: 1;
+    }
+
+    to {
+        transform: translateY(110vh);
+        opacity: 0;
+    }
+}
